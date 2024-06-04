@@ -22,8 +22,11 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>hrManager</module>
-        <module>activityManager</module>
+        <module>stuff</module>
+        <module>activity</module>
+        <module>config-server</module>
+        <module>discovery</module>
+        <module>mission</module>
     </modules>
 
 </project>
