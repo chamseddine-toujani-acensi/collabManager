@@ -3,10 +3,7 @@ package fr.acensi.stuff.employee;
 
 import fr.acensi.stuff.account.Account;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 @Entity
 @Table(name = "employee")
@@ -14,10 +11,11 @@ import lombok.Setter;
 @NoArgsConstructor
 @Getter
 @Setter
+@Builder
 public class Employee{
     @Id
     @GeneratedValue
-    private Long id;
+    private Integer id;
     private String firstName;
     private String lastName;
     private String email;
@@ -25,8 +23,7 @@ public class Employee{
     private String address;
     private String city;
     private String state;
+    private String country;
     private String zip;
-    @OneToOne
-    private Account account;
 
 }

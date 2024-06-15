@@ -3,9 +3,11 @@ package fr.acensi.stuff.collaborator;
 import fr.acensi.stuff.model.AbstractEntity;
 import fr.acensi.stuff.account.Account;
 import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
 @Getter
 @Setter
 @Entity
@@ -14,7 +16,7 @@ public class Collaborator extends AbstractEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id", nullable = false)
-    private Long id;
+    private Integer id;
 
     private String firstName;
     private String lastName;
@@ -25,8 +27,4 @@ public class Collaborator extends AbstractEntity {
     private String state;
     private String country;
     private String zip;
-
-
-    @OneToOne
-    private Account account;
 }

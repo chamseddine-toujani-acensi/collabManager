@@ -3,3 +3,8 @@ spring:
     name: stuff-service
   config:
     import: optional:configserver:http://localhost:8888
+
+log:
+  login:
+    file:
+      path: C:\\Users\\chamseddine.toujani\\log\\login.txt

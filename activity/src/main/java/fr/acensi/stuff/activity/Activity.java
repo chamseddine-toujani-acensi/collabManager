@@ -23,7 +23,7 @@ public class Activity {
 
     @Id
     @GeneratedValue
-    private int id;
+    private Integer id;
 
     private String reference;
 

@@ -19,3 +19,5 @@ application:
     customer-url: http://localhost:8222/api/v1/cutomers
     mission-url: http://localhost:8222/api/v1/missions
     payment-url: http://localhost:8222/api/v1/payments
+    collaborator-url: http://localhost:8222/api/v1/collaborators
+    employee-url: http://localhost:8222/api/v1/employees

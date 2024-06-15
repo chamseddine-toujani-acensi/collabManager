@@ -30,6 +30,6 @@ public record ActivityRequest(
         String collaboratorId,
 
         @NotNull(message = "Employee is required")
-        String EmployeeId
+        String employeeId
 ) {
 }
