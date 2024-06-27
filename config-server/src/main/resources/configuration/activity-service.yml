@@ -6,11 +6,17 @@ spring:
     driver-class-name: org.postgresql.Driver
   jpa:
     hibernate:
-      ddl-auto: create
+      ddl-auto: update
     database: postgresql
     database-platform: org.hibernate.dialect.PostgreSQLDialect
-  application:
-    name: activity-service
+  kafka:
+    producer:
+      bootstrap-servers: localhost:9092
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+      properties:
+        spring.json.type.mapping: activityConfirmation:fr.acensi.activity.activity.ActivityConfirmation
+
 server:
   port: 8070
 
@@ -18,6 +24,9 @@ application:
   config:
     customer-url: http://localhost:8222/api/v1/cutomers
     mission-url: http://localhost:8222/api/v1/missions
+    activity-url: http://localhost:8222/api/v1/activities
     payment-url: http://localhost:8222/api/v1/payments
-    collaborator-url: http://localhost:8222/api/v1/collaborators
-    employee-url: http://localhost:8222/api/v1/employees
+    collaborator-url: http://localhost:8222/api/v1/stuff/collaborators
+    company-url: http://localhost:8222/api/v1/stuff/companies
+    account-url: http://localhost:8222/api/v1/stuff/accounts
+    employee-url: http://localhost:8222/api/v1/stuff/employees

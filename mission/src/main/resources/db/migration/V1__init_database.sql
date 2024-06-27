@@ -14,7 +14,7 @@ create table if not exists mission
     end_date DATE NOT NULL DEFAULT CURRENT_DATE,
     status varchar(255),
     category_id integer constraint fk_category_mission references category,
-    tgm numeric(38,2),
+    tjm numeric(38,2),
     address varchar(255),
     phone varchar(255),
     email varchar(255)

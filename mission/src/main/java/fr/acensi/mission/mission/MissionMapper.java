@@ -16,7 +16,7 @@ public class MissionMapper {
                 .endDate(LocalDate.parse(request.endDate(), DateTimeFormatter.ISO_DATE))
                 .status(Status.valueOf(request.status()))
                 .category(Category.builder().id(request.categoryId()).build())
-                .tgm(request.tgm())
+                .tjm(request.tjm())
                 .address(request.address())
                 .phone(request.phone())
                 .email(request.email())
@@ -32,7 +32,7 @@ public class MissionMapper {
                 mission.getEndDate().toString(),
                 mission.getStatus(),
                 mission.getCategory().getName(),
-                mission.getTgm(),
+                mission.getTjm(),
                 mission.getAddress(),
                 mission.getPhone(),
                 mission.getEmail()

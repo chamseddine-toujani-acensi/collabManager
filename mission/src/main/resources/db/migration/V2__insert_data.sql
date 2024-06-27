@@ -7,7 +7,7 @@ VALUES
     (nextval('category_seq'), 'Design', 'UI/UX and graphic design projects');
 
 -- Insert sample data into the mission table
-INSERT INTO mission (id, title, description, start_date, end_date, status, category_id, tgm, address, phone, email)
+INSERT INTO mission (id, title, description, start_date, end_date, status, category_id, tjm, address, phone, email)
 VALUES
     (nextval('mission_seq'), 'Java Web Application', 'Develop a web application using Spring Boot and Angular', '2024-06-01', '2024-12-01', 'In Progress', (SELECT id FROM category WHERE name = 'Java Development'), 15000.00, '123 Java St', '555-1234', 'java.dev@example.com'),
     (nextval('mission_seq'), 'Enterprise .NET Application', 'Create an enterprise-level application using ASP.NET Core', '2024-07-01', '2024-12-31', 'Planned', (SELECT id FROM category WHERE name = '.NET Development'), 20000.00, '456 NET Ave', '555-5678', 'dotnet.dev@example.com'),

@@ -25,8 +25,12 @@
         <module>stuff</module>
         <module>activity</module>
         <module>config-server</module>
+        <module>customer</module>
         <module>discovery</module>
         <module>mission</module>
+        <module>payment</module>
+        <module>notification</module>
+        <module>gateway</module>
     </modules>
 
 </project>

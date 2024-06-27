@@ -18,7 +18,6 @@ public class Mission {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
-
     private String title;
     private String description;
     @DateTimeFormat(pattern = "dd/MM/yyyy")
@@ -26,7 +25,7 @@ public class Mission {
     @DateTimeFormat(pattern = "dd/MM/yyyy")
     private LocalDate endDate;
 
-    private BigDecimal tgm;
+    private BigDecimal tjm;
     private String address;
     private String phone;
     private String email;

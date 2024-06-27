@@ -13,7 +13,7 @@ public record MissionResponse(
         String endDate,
         Status status,
         String category,
-        BigDecimal tgm,
+        BigDecimal tjm,
         String address,
         String phone,
         String email

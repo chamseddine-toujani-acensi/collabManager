@@ -17,8 +17,8 @@ public record MissionRequest(
         String status,
         @NotNull(message = "Mission should have a valid category")
         Integer categoryId,
-        @Positive(message = "Mission should have a valid tgm")
-        BigDecimal tgm,
+        @Positive(message = "Mission should have a valid tjm")
+        BigDecimal tjm,
         String address,
         String phone,
         String email

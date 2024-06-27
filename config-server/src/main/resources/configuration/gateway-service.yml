@@ -1,0 +1,29 @@
+spring:
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        - id: customer-service
+          uri: lb:http://CUSTOMER-SERVICE
+          predicates:
+            - Path=/api/v1/customers/**
+        - id: activity-service
+          uri: lb:http://ACTIVITY-SERVICE
+          predicates:
+            - Path=/api/v1/activities/**
+        - id: mission-service
+          uri: lb:http://MISSION-SERVICE
+          predicates:
+            - Path=/api/v1/missions/**
+        - id: stuff-service
+          uri: lb:http://STUFF-SERVICE
+          predicates:
+            - Path=/api/v1/stuff/**
+        - id: payment-service
+          uri: lb:http://PAYMENT-SERVICE
+          predicates:
+            - Path=/api/v1/payments/**
+server:
+  port: 8222
