@@ -1,5 +1,5 @@
 package fr.acensi.account;
 
-public enum Role {
+public enum ERole {
     USER,ADMIN
 }

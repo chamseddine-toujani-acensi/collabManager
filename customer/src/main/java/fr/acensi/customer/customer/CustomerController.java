@@ -13,7 +13,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class CustomerController {
 
-    private CustomerService service;
+    private final CustomerService service;
 
 
     @PostMapping

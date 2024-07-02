@@ -9,17 +9,17 @@ import lombok.*;
 @Getter
 @Setter
 @Builder
-@Table(name = "roles")
-public class Role {
+@Table(name = "status")
+public class Status {
   @Id
   @GeneratedValue(strategy = GenerationType.AUTO)
   private Integer id;
 
   @Enumerated(EnumType.STRING)
   @Column(length = 20)
-  private ERole name;
+  private EStatus name;
 
-  public Role(ERole name) {
+  public Status(EStatus name) {
     this.name = name;
   }
 }

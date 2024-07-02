@@ -6,23 +6,23 @@ spring:
           enabled: true
       routes:
         - id: customer-service
-          uri: lb:http://CUSTOMER-SERVICE
+          uri: ${CUSTOMER_SERVICE_URL:http://localhost:8090}
           predicates:
             - Path=/api/v1/customers/**
         - id: activity-service
-          uri: lb:http://ACTIVITY-SERVICE
+          uri: ${ACTIVITY_SERVICE_URL:http://localhost:8070}
           predicates:
             - Path=/api/v1/activities/**
         - id: mission-service
-          uri: lb:http://MISSION-SERVICE
+          uri: ${MISSION_SERVICE_URL:http://localhost:8050}
           predicates:
             - Path=/api/v1/missions/**
         - id: stuff-service
-          uri: lb:http://STUFF-SERVICE
+          uri: ${STUFF_SERVICE_URL:http://localhost:8060}
           predicates:
             - Path=/api/v1/stuff/**
         - id: payment-service
-          uri: lb:http://PAYMENT-SERVICE
+          uri: ${PAYMENT_SERVICE_URL:http://localhost:8040}
           predicates:
             - Path=/api/v1/payments/**
 server:

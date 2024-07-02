@@ -4,6 +4,8 @@ import fr.acensi.account.Account;
 import lombok.Builder;
 import lombok.Data;
 
+import java.util.List;
+
 /**
  * DTO for {@link Account}
  */
@@ -14,5 +16,5 @@ public class AccountDto {
     private String login;
     private String password;
     private String status;
-    private String role;
+    private List<String> role;
 }

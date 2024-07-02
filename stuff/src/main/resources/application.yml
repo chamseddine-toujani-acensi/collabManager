@@ -4,7 +4,9 @@ spring:
   config:
     import: optional:configserver:http://localhost:8888
 
-log:
-  login:
-    file:
-      path: C:\\Users\\chamseddine.toujani\\log\\login.txt
+# App Properties
+stuff:
+  app:
+    jwtCookieName: acensi
+    jwtSecret: ======================Acensi=Spring===========================
+    jwtExpirationMs: 86400000

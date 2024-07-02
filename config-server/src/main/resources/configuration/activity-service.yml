@@ -28,5 +28,5 @@ application:
     payment-url: http://localhost:8222/api/v1/payments
     collaborator-url: http://localhost:8222/api/v1/stuff/collaborators
     company-url: http://localhost:8222/api/v1/stuff/companies
-    account-url: http://localhost:8222/api/v1/stuff/accounts
+    account-url: http://localhost:8222/api/v1/auth
     employee-url: http://localhost:8222/api/v1/stuff/employees

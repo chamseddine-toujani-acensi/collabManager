@@ -1,15 +1,16 @@
 package fr.acensi.dto.response;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
-@Data
-@Builder
+import java.util.List;
+
 @AllArgsConstructor
 @NoArgsConstructor
-public class AuthenticationResponse {
-
-    private String token;
+@Getter
+@Setter
+public class AccountInfoResponse {
+    private Long id;
+    private String login;
+    private String email;
+    private List<String> roles;
 }

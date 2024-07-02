@@ -1,12 +1,11 @@
 package fr.acensi.dto.mapper;
 
-import fr.acensi.account.Account;
-import fr.acensi.account.Status;
+import fr.acensi.account.*;
 import fr.acensi.dto.AccountDto;
-import fr.acensi.account.Role;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Service
 public class AccountMapper {
@@ -16,8 +15,8 @@ public class AccountMapper {
                 .id(value.getId())
                 .login(value.getLogin())
                 .password(value.getPassword())
-                .status(value.getStatus().name())
-                .role(value.getRole().name())
+                .status(value.getStatus().getName().name())
+                .role(value.getRoles().stream().map(role -> role.getName().name()).collect(Collectors.toList()))
                 .build());
     }
 
@@ -26,8 +25,8 @@ public class AccountMapper {
                 .id(accountDto.getId())
                 .login(accountDto.getLogin())
                 .password(accountDto.getPassword())
-                .status(Status.valueOf(accountDto.getStatus()))
-                .role(Role.valueOf(accountDto.getRole()))
+                .status(Status.builder().name(EStatus.valueOf(accountDto.getStatus())).build())
+                .roles(accountDto.getRole().stream().map(role -> Role.builder().name(ERole.valueOf(role)).build()).collect(Collectors.toSet()))
                 .build();
     }
 }
